@@ -96,9 +96,9 @@ stages:
              displayName: 'Deploy .NET Code to Azure App Service '
              inputs:
               ConnectionType: 'AzureRM'
-              azureSubscription: '(08c09aa4-6f52-4eb3-8bda-dffe152485ed)'
+              azureSubscription: 'Azure subscription 1(08c09aa4-6f52-4eb3-8bda-dffe152485ed)'
               appType: 'webApp'
-              WebAppName: $(appName)
+              WebAppName: 'AS3Demo'
               packageForLinux: '$(Pipeline.Workspace)/$(artifaceName)/$(buildConfiguration)/*.zip'
               RuntimeStack: 'DOTNETCORE|5.0'
 
@@ -119,8 +119,8 @@ stages:
              displayName: 'Deploy .NET Code to Azure App Service '
              inputs:
               ConnectionType: 'AzureRM'
-              azureSubscription: '(08c09aa4-6f52-4eb3-8bda-dffe152485ed)'
+              azureSubscription: 'Azure subscription 1(08c09aa4-6f52-4eb3-8bda-dffe152485ed)'
               appType: 'webAppLinux'
-              WebAppName: $(appName)
+              WebAppName: 'AS3Test'
               packageForLinux: '$(Pipeline.Workspace)/$(artifaceName)/$(buildConfiguration)/*.zip'
               RuntimeStack: 'DOTNETCORE|5.0'
