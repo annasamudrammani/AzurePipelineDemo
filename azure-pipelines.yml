@@ -97,10 +97,10 @@ stages:
              inputs:
               ConnectionType: 'AzureRM'
               azureSubscription: 'Azure subscription 1(08c09aa4-6f52-4eb3-8bda-dffe152485ed)'
-              appType: 'webApp'
+              appType: 'webAppLinux'
               WebAppName: 'AS3Demo'
               packageForLinux: '$(Pipeline.Workspace)/$(artifaceName)/$(buildConfiguration)/*.zip'
-              RuntimeStack: 'DOTNETCORE|5.0'
+              RuntimeStack: 'DOTNETCORE|6.0'
 
 - stage: 'DeployTest'
   displayName: 'Deploy to Test'
@@ -123,4 +123,4 @@ stages:
               appType: 'webAppLinux'
               WebAppName: 'AS3Test'
               packageForLinux: '$(Pipeline.Workspace)/$(artifaceName)/$(buildConfiguration)/*.zip'
-              RuntimeStack: 'DOTNETCORE|5.0'
+              RuntimeStack: 'DOTNETCORE|6.0'
